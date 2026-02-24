@@ -73,82 +73,92 @@ function EighthSection() {
           sx={{
             display: "grid",
             gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
-            gap: 4,
+            gap: 6,
+            pb:6
           }}
         >
           {data.posts.map((post, index) => (
             <Card
-              key={index}
-              sx={{
-                borderRadius: 2,
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                // transition: "transform 0.3s, box-shadow 0.3s",
-                // "&:hover": {
-                //   transform: "translateY(-4px)",
-                //   boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-                // },
-              }}
-            >
-              {/* Blog Image */}
-              <CardMedia
-                component="img"
-                height="200"
-                image={blogImages[index]}
-                alt={post.title}
-                sx={{
-                  objectFit: "cover",
-                }}
-              />
-              
-              {/* Blog Content */}
-              <CardContent sx={{ p: 3 }}>
-                <Typography
-                  sx={{
-                    color: "#1a2b3c",
-                    fontSize: "1.1rem",
-                    fontWeight: 600,
-                    mb: 2,
-                    lineHeight: 1.4,
-                    height: "3.5rem",
-                    overflow: "hidden",
-                    display: "-webkit-box",
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: "vertical",
-                  }}
-                >
-                  {post.title}
-                </Typography>
-                
-                <Link
-                  href="#"
-                  underline="none"
-                  sx={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 1,
-                    color: "#4CAF50",
-                    fontSize: "1rem",
-                    fontWeight: 500,
-                    cursor: "pointer",
-                    "&:hover": {
-                      color: "#45a049",
-                      "& .arrow-icon": {
-                        transform: "translateX(4px)",
-                      },
-                    },
-                  }}
-                >
-                  Readmore
-                  <ArrowForwardIcon 
-                    className="arrow-icon" 
-                    sx={{ 
-                      fontSize: 18,
-                      transition: "transform 0.3s",
-                    }} 
-                  />
-                </Link>
-              </CardContent>
-            </Card>
+  key={index}
+  sx={{
+    position: "relative",
+    borderRadius: 3,
+    overflow: "visible",
+    boxShadow: "none",
+    bgcolor: "transparent",
+  }}
+>
+  {/* Image */}
+  <Box
+    sx={{
+      borderRadius: 3,
+      overflow: "hidden",
+    }}
+  >
+    <CardMedia
+      component="img"
+      image={blogImages[index]}
+      alt={post.title}
+      sx={{
+        height: { xs: 220, sm: 240, md: 260 },
+        objectFit: "cover",
+        width: "100%",
+      }}
+    />
+  </Box>
+
+  {/* Overlay Content Box */}
+  <CardContent
+    sx={{
+      position: "absolute",
+      bottom: -40,
+      left: "50%",
+      transform: "translateX(-50%)",
+      width: "85%",
+      bgcolor: "#f5f7fa",
+      borderRadius: 3,
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      textAlign: "center",
+      p: 3,
+    }}
+  >
+    <Typography
+      sx={{
+        color: "#1a2b3c",
+        fontSize: "1.05rem",
+        fontWeight: 600,
+        mb: 2,
+        lineHeight: 1.4,
+      }}
+    >
+      {post.title}
+    </Typography>
+
+    <Link
+      href="#"
+      underline="none"
+      sx={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 1,
+        color: "#4CAF50",
+        fontWeight: 500,
+        "&:hover .arrow-icon": {
+          transform: "translateX(4px)",
+        },
+      }}
+    >
+      Readmore
+      <ArrowForwardIcon
+        className="arrow-icon"
+        sx={{
+          fontSize: 18,
+          transition: "transform 0.3s",
+        }}
+      />
+    </Link>
+  </CardContent>
+</Card>
           ))}
         </Box>
       </Container>

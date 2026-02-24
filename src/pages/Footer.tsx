@@ -40,6 +40,17 @@ function TenthSection() {
   const [data, setData] = useState<FooterData | null>(null);
   const [email, setEmail] = useState("");
 
+const footerLinkStyle = {
+    color: "#89939e",
+    fontSize: "0.95rem",
+    cursor: "pointer",
+    transition: "color 0.3s",
+    "&:hover": {
+      color: "#4CAF50",
+    },
+  };
+
+
   useEffect(() => {
     import("../data/footer.json")
       .then((module) => setData(module.default))
@@ -125,6 +136,35 @@ function TenthSection() {
               </Box>
             </Box>
           </Grid>
+          {/* Column 2 - Company */}
+<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+  <Typography color="#fff" fontWeight={600} mb={3}>
+    {data.company}
+  </Typography>
+
+  <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+    <Typography sx={footerLinkStyle}>{data.aboutUs}</Typography>
+    <Typography sx={footerLinkStyle}>{data.blog}</Typography>
+    <Typography sx={footerLinkStyle}>{data.contactUs}</Typography>
+    <Typography sx={footerLinkStyle}>{data.pricing}</Typography>
+    <Typography sx={footerLinkStyle}>{data.testimonials}</Typography>
+  </Box>
+</Grid>
+
+{/* Column 3 - Support */}
+<Grid size={{ xs: 12, sm: 6, md: 3 }}>
+  <Typography color="#fff" fontWeight={600} mb={3}>
+    {data.support}
+  </Typography>
+
+  <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+    <Typography sx={footerLinkStyle}>{data.helpCenter}</Typography>
+    <Typography sx={footerLinkStyle}>{data.termsOfService}</Typography>
+    <Typography sx={footerLinkStyle}>{data.legal}</Typography>
+    <Typography sx={footerLinkStyle}>{data.privacyPolicy}</Typography>
+    <Typography sx={footerLinkStyle}>{data.status}</Typography>
+  </Box>
+</Grid>
 
           {/* Column 4 - Email */}
           <Grid size={{xs:12, sm:6, md:3}}>
