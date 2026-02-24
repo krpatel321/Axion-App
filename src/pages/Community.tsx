@@ -27,13 +27,13 @@ import {
 
 import communityData from "../data/communityData.json";
 
-import communityBanner from "../assets/Illustration.png";
+import communityBanner from "../assets/download.png";
 import member1 from "../assets/Icon.png";
 import member2 from "../assets/Icon(1).png";
 import member3 from "../assets/Icon(2).png";
-import post1 from "../assets/Icon(3).png";
-import post2 from "../assets/Logo(1).png";
-import post3 from "../assets/Logo(2).png";
+import post3 from "../assets/Icon(3).png";
+import post2 from "../assets/download(1).png";
+import post1 from "../assets/download(2).png";
 
 /* ================= TYPES ================= */
 
@@ -95,7 +95,7 @@ function Community() {
         {/* ================= HERO ================= */}
         <Card sx={{ borderRadius: 5, mb: 8, overflow: "hidden" }}>
           <Grid container>
-            <Grid size={{ xs: 12, md: 6 }}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Box
                 component="img"
                 src={communityBanner}
@@ -113,10 +113,10 @@ function Community() {
               </Typography>
 
               <Box display="flex" gap={2}>
-                <Button variant="contained" sx={{background:"#4CAF50"}}>
+                <Button variant="contained" size="large" sx={{background:"#4CAF50"}}>
                   Join Community
                 </Button>
-                <Button variant="outlined" color="success">
+                <Button variant="outlined" size="large" color="success">
                   Learn More
                 </Button>
               </Box>
@@ -283,7 +283,7 @@ function Community() {
           <Typography color="text.secondary" mb={4}>
             {data.cta.description}
           </Typography>
-          <Button variant="contained" color="success">
+          <Button variant="contained" size="large" sx={{background:"#4CAF50"}}>
             Join Now
           </Button>
         </Card>

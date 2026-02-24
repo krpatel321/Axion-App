@@ -16,6 +16,7 @@ import {
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
+
 import {
   CheckCircle,
   Cancel,
@@ -24,11 +25,11 @@ import {
   RocketLaunch,
 } from "@mui/icons-material";
 
-import pricingData from "../data/pricingData.json";
+import AccountBalanceWalletRounded from "@mui/icons-material/AccountBalanceWalletRounded";
+import TrendingUpRounded from "@mui/icons-material/TrendingUpRounded";
+import BusinessCenterRounded from "@mui/icons-material/BusinessCenterRounded";
 
-import basicPlan from "../assets/Logo(3).png";
-import proPlan from "../assets/Logo(1).png";
-import enterprisePlan from "../assets/Logo(2).png";
+import pricingData from "../data/pricingData.json";
 
 function Pricing() {
   const data = pricingData;
@@ -37,9 +38,14 @@ function Pricing() {
     "monthly" | "annual"
   >("monthly");
 
-  const planImages = [basicPlan, proPlan, enterprisePlan];
-
   const themeColor = "#65ad45";
+
+  // Plan icons instead of images
+  const planIcons = [
+    <AccountBalanceWalletRounded sx={{ fontSize: 40 }} />,
+    <TrendingUpRounded sx={{ fontSize: 40 }} />,
+    <BusinessCenterRounded sx={{ fontSize: 40 }} />,
+  ];
 
   return (
     <Box
@@ -47,14 +53,11 @@ function Pricing() {
         py: 12,
         bgcolor: "#f5f7fa",
         minHeight: "100vh",
-
-        // 🔥 Remove yellow focus outline globally inside this page
-        "& *:focus": {
-          outline: "none",
-        },
+        "& *:focus": { outline: "none" },
       }}
     >
       <Container maxWidth="lg">
+        {/* Header */}
         <Box textAlign="center" mb={6}>
           <Typography variant="h3" fontWeight={700} mb={2}>
             {data.heading}
@@ -70,33 +73,6 @@ function Pricing() {
             value={billingCycle}
             exclusive
             onChange={(_, value) => value && setBillingCycle(value)}
-            sx={{
-              border: "none",
-              "& .MuiToggleButton-root": {
-                border: "none",
-                color: "#6c757d",
-                fontWeight: 600,
-                outline: "none",
-                "&.Mui-selected": {
-                  bgcolor: themeColor,
-                  color: "white",
-                  "&:hover": {
-                    bgcolor: "#559539",
-                  },
-                },
-                "&:hover": {
-                  bgcolor: "#f5f7fa",
-                },
-                "&:focus": {
-                  outline: "none",
-                  boxShadow: "none",
-                },
-                "&.Mui-focusVisible": {
-                  outline: "none",
-                  boxShadow: "none",
-                },
-              },
-            }}
           >
             <ToggleButton value="monthly">Monthly</ToggleButton>
             <ToggleButton value="annual">Annual</ToggleButton>
@@ -118,7 +94,7 @@ function Pricing() {
         {/* Pricing Cards */}
         <Grid container spacing={4}>
           {data.plans.map((plan, index) => (
-            <Grid size={{xs:12, md:4}} key={plan.name}>
+            <Grid size={{xs:12 , md:4}} key={plan.name}>
               <Card
                 sx={{
                   height: "100%",
@@ -126,20 +102,9 @@ function Pricing() {
                   boxShadow: plan.popular
                     ? `0 8px 24px ${themeColor}30`
                     : "0 4px 12px rgba(0,0,0,0.08)",
-                  border: "none",
-                  transition: "transform 0.3s, box-shadow 0.3s",
-                  outline: "none",
-
+                  transition: "0.3s",
                   "&:hover": {
                     transform: "translateY(-8px)",
-                    boxShadow: plan.popular
-                      ? `0 16px 32px ${themeColor}40`
-                      : "0 12px 28px rgba(0,0,0,0.15)",
-                  },
-
-                  "&:focus": {
-                    outline: "none",
-                    boxShadow: "none",
                   },
                 }}
               >
@@ -159,15 +124,28 @@ function Pricing() {
 
                 <CardContent>
                   <Box textAlign="center" mb={2}>
+                    {/* 🔥 Icon Circle */}
                     <Box
-                      component="img"
-                      src={planImages[index]}
-                      alt={plan.name}
-                      sx={{ width: 70, mb: 2 }}
-                    />
+                      sx={{
+                        width: 80,
+                        height: 80,
+                        borderRadius: "50%",
+                        bgcolor: `${themeColor}15`,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mx: "auto",
+                        mb: 2,
+                        color: themeColor,
+                      }}
+                    >
+                      {planIcons[index]}
+                    </Box>
+
                     <Typography variant="h5" fontWeight={700}>
                       {plan.name}
                     </Typography>
+
                     <Typography color="text.secondary">
                       {plan.description}
                     </Typography>
@@ -227,7 +205,6 @@ function Pricing() {
                             borderColor: themeColor,
                             color: themeColor,
                             "&:hover": {
-                              borderColor: "#559539",
                               bgcolor: `${themeColor}10`,
                             },
                           }),
@@ -235,17 +212,6 @@ function Pricing() {
                       borderRadius: 2,
                       fontWeight: 600,
                       textTransform: "none",
-                      fontSize: "1rem",
-                      outline: "none",
-
-                      "&:focus": {
-                        outline: "none",
-                        boxShadow: "none",
-                      },
-                      "&.Mui-focusVisible": {
-                        outline: "none",
-                        boxShadow: "none",
-                      },
                     }}
                   >
                     {plan.cta}
@@ -261,10 +227,10 @@ function Pricing() {
           mt={10}
           p={6}
           sx={{
-            bgcolor: "#1a2b3c",
+            bgcolor: "white",
             borderRadius: 4,
             textAlign: "center",
-            color: "white",
+            color: "black",
           }}
         >
           <RocketLaunch sx={{ fontSize: 40, mb: 2, color: themeColor }} />
@@ -278,19 +244,11 @@ function Pricing() {
             variant="contained"
             sx={{
               bgcolor: themeColor,
-              color: "white",
               px: 4,
               py: 1.5,
               fontWeight: 600,
               textTransform: "none",
-              boxShadow: "none",
-              "&:hover": {
-                bgcolor: "#559539",
-              },
-              "&:focus": {
-                outline: "none",
-                boxShadow: "none",
-              },
+              "&:hover": { bgcolor: "#559539" },
             }}
           >
             {data.enterprise.cta}

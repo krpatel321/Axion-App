@@ -33,10 +33,10 @@ import {
 import blogData from "../data/blogData.json";
 
 // Images
-import blogBanner from "../assets/Illustration.png";
-import blogPost1 from "../assets/Illustration.png";
-import blogPost2 from "../assets/Icon(1).png";
-import blogPost3 from "../assets/Icon(2).png";
+import blogBanner from "../assets/download(1).png";
+import blogPost1 from "../assets/download.png";
+import blogPost2 from "../assets/download(2).png";
+import blogPost3 from "../assets/download.png";
 import blogPost4 from "../assets/Icon(3).png";
 import blogPost5 from "../assets/Icon.png";
 import blogPost6 from "../assets/image.png";

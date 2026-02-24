@@ -1,22 +1,19 @@
-// import React from "react";
 import {
   Box,
   Container,
   Typography,
   Grid,
   Card,
-  CardContent,
 } from "@mui/material";
 
-import featuresData from "../data/featuresData.json";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import AnalyticsOutlinedIcon from "@mui/icons-material/AnalyticsOutlined";
+import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
+import ApiOutlinedIcon from "@mui/icons-material/ApiOutlined";
+import DevicesOutlinedIcon from "@mui/icons-material/DevicesOutlined";
+import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
 
-// Import feature icons
-import feature1 from "../assets/Logo.png";
-import feature2 from "../assets/Logo(1).png";
-import feature3 from "../assets/Logo(2).png";
-import feature4 from "../assets/Logo(3).png";
-import feature5 from "../assets/Logo(4).png";
-import feature6 from "../assets/Logo(5).png";
+import featuresData from "../data/featuresData.json";
 
 /* ========= TYPES ========= */
 
@@ -39,18 +36,18 @@ const data: FeaturesData = featuresData;
 
 function Features() {
   const featureIcons = [
-    feature1,
-    feature2,
-    feature3,
-    feature4,
-    feature5,
-    feature6,
+    <PeopleAltOutlinedIcon fontSize="large" />,
+    <AnalyticsOutlinedIcon fontSize="large" />,
+    <SecurityOutlinedIcon fontSize="large" />,
+    <ApiOutlinedIcon fontSize="large" />,
+    <DevicesOutlinedIcon fontSize="large" />,
+    <SupportAgentOutlinedIcon fontSize="large" />,
   ];
 
   return (
     <Box
       sx={{
-        pt: { xs: 14, md: 18 },
+        pt: { xs: 12, md: 16 },
         pb: { xs: 10, md: 14 },
         bgcolor: "#f8fafc",
       }}
@@ -80,53 +77,67 @@ function Features() {
         </Box>
 
         {/* ===== Features Grid ===== */}
-        <Grid container spacing={5}>
+        <Grid container rowSpacing={6} columnSpacing={5}>
           {data.features.map((feature, index) => (
-            <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
+            <Grid  size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <Card
                 sx={{
                   height: "100%",
-                  p: 4,
                   borderRadius: 4,
                   textAlign: "center",
-                  background: "white",
-                  boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
+                  background: "#ffffff",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
                   transition: "all 0.3s ease",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                  px: 4,
+                  py: 2,
                   "&:hover": {
-                    transform: "translateY(-10px)",
-                    boxShadow: "0 16px 40px rgba(0,0,0,0.1)",
+                    transform: "translateY(-8px)",
+                    boxShadow: "0 18px 40px rgba(0,0,0,0.1)",
                   },
                 }}
               >
+                {/* Icon */}
                 <Box
-                  component="img"
-                  src={featureIcons[index]}
-                  alt={feature.title}
                   sx={{
                     width: 80,
                     height: 80,
+                    borderRadius: "50%",
+                    background:
+                      "linear-gradient(135deg,#e8f5e9,#f1f8e9)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     mb: 3,
+                    color: "#4CAF50",
+                    transition: "all 0.3s ease",
                   }}
-                />
+                >
+                  {featureIcons[index]}
+                </Box>
 
-                <CardContent>
-                  <Typography
-                    variant="h6"
-                    fontWeight={600}
-                    sx={{ mb: 2, color: "#1a2b3c" }}
-                  >
-                    {feature.title}
-                  </Typography>
+                {/* Title */}
+                <Typography
+                  variant="h6"
+                  fontWeight={600}
+                  sx={{ mb: 2, color: "#1a2b3c" }}
+                >
+                  {feature.title}
+                </Typography>
 
-                  <Typography
-                    sx={{
-                      color: "#6c757d",
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    {feature.description}
-                  </Typography>
-                </CardContent>
+                {/* Description */}
+                <Typography
+                  sx={{
+                    color: "#6c757d",
+                    lineHeight: 1.7,
+                    fontSize: "0.95rem",
+                  }}
+                >
+                  {feature.description}
+                </Typography>
               </Card>
             </Grid>
           ))}
@@ -138,9 +149,11 @@ function Features() {
             mt: 14,
             p: { xs: 4, md: 8 },
             borderRadius: 5,
+            boxShadow:1.7,
             textAlign: "center",
-            background: "linear-gradient(135deg,#1a2b3c,#2d4a63)",
-            color: "white",
+            background:
+              "white",
+            color: "black",
           }}
         >
           <Typography variant="h4" fontWeight={700} mb={3}>
