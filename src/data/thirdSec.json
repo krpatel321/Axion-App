@@ -1,0 +1,27 @@
+{
+  "heading": "Manage your entire community in a single system",
+  "subheading": "Who is Nextcent suitable for?",
+  "features": [
+    {
+      "id": "feature-1",
+      "title": "Membership Organisations",
+      "description": "Our membership management software provides full automation of membership renewals and payments",
+      "icon": "Icon(1).png",
+      "color": "#4CAF50"
+    },
+    {
+      "id": "feature-2", 
+      "title": "National Associations",
+      "description": "Our membership management software provides full automation of membership renewals and payments",
+      "icon": "Icon(2).png",
+      "color": "#2196F3"
+    },
+    {
+      "id": "feature-3",
+      "title": "Clubs And Groups",
+      "description": "Our membership management software provides full automation of membership renewals and payments",
+      "icon": "Icon(3).png",
+      "color": "#FF9800"
+    }
+  ]
+}

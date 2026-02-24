@@ -1,0 +1,132 @@
+{
+  "heading": "Our Blog",
+  "subheading": "Insights, ideas, and stories from our team and community",
+  "featuredPost": {
+    "title": "The Future of Web Development: Trends to Watch in 2024",
+    "excerpt": "Explore the latest trends shaping web development, from AI-powered tools to new frameworks and best practices that are redefining how we build for the web.",
+    "category": "Technology",
+    "date": "Mar 15, 2024",
+    "author": "Sarah Johnson",
+    "authorRole": "Lead Developer",
+    "readTime": "8 min read",
+    "likes": 234,
+    "comments": 45
+  },
+  "posts": [
+    {
+      "title": "Building Scalable Applications with React and TypeScript",
+      "excerpt": "Learn how to structure large-scale React applications with TypeScript for better type safety and developer experience.",
+      "category": "Development",
+      "date": "Mar 12, 2024",
+      "author": "Michael Chen",
+      "readTime": "6 min read",
+      "likes": 156,
+      "comments": 23
+    },
+    {
+      "title": "UX Design Principles That Drive User Engagement",
+      "excerpt": "Discover the key UX design principles that can help create more engaging and intuitive user experiences.",
+      "category": "Design",
+      "date": "Mar 10, 2024",
+      "author": "Emily Rodriguez",
+      "readTime": "5 min read",
+      "likes": 189,
+      "comments": 31
+    },
+    {
+      "title": "Mastering State Management in Modern Web Apps",
+      "excerpt": "A comprehensive guide to state management solutions including Redux, Zustand, and Context API.",
+      "category": "Development",
+      "date": "Mar 8, 2024",
+      "author": "David Kim",
+      "readTime": "7 min read",
+      "likes": 143,
+      "comments": 19
+    },
+    {
+      "title": "The Role of AI in Modern Software Development",
+      "excerpt": "How artificial intelligence is transforming the way developers write, test, and deploy code.",
+      "category": "Technology",
+      "date": "Mar 5, 2024",
+      "author": "Sarah Johnson",
+      "readTime": "6 min read",
+      "likes": 267,
+      "comments": 42
+    },
+    {
+      "title": "Creating Accessible Web Applications",
+      "excerpt": "Best practices for building websites that are accessible to everyone, regardless of ability.",
+      "category": "Accessibility",
+      "date": "Mar 3, 2024",
+      "author": "Lisa Wang",
+      "readTime": "5 min read",
+      "likes": 134,
+      "comments": 18
+    },
+    {
+      "title": "Performance Optimization Techniques for React Apps",
+      "excerpt": "Practical tips and techniques to improve the performance of your React applications.",
+      "category": "Performance",
+      "date": "Feb 28, 2024",
+      "author": "Michael Chen",
+      "readTime": "8 min read",
+      "likes": 198,
+      "comments": 27
+    }
+  ],
+  "categories": [
+    {
+      "name": "Development",
+      "count": 24
+    },
+    {
+      "name": "Design",
+      "count": 18
+    },
+    {
+      "name": "Technology",
+      "count": 15
+    },
+    {
+      "name": "Accessibility",
+      "count": 9
+    },
+    {
+      "name": "Performance",
+      "count": 12
+    },
+    {
+      "name": "Career",
+      "count": 8
+    }
+  ],
+  "popularPosts": [
+    {
+      "title": "Getting Started with React",
+      "date": "Feb 20, 2024"
+    },
+    {
+      "title": "CSS Grid vs Flexbox",
+      "date": "Feb 18, 2024"
+    },
+    {
+      "title": "TypeScript Best Practices",
+      "date": "Feb 15, 2024"
+    }
+  ],
+  "tags": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "UX Design",
+    "Web Development",
+    "Performance",
+    "Accessibility",
+    "AI",
+    "Frameworks"
+  ],
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "description": "Get the latest posts delivered right to your inbox"
+  }
+}

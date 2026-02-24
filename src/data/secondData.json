@@ -1,0 +1,41 @@
+{
+  "heading": "Our Clients",
+  "subheading": "We have been working with some Fortune 500+ clients",
+  "clients": [
+    {
+      "id": 1,
+      "name": "Microsoft",
+      "icon": "Logo.png"
+    },
+    {
+      "id": 2,
+      "name": "Google",
+      "icon": "Logo(1).png"
+    },
+    {
+      "id": 3,
+      "name": "Amazon",
+      "icon": "Logo(2).png"
+    },
+    {
+      "id": 4,
+      "name": "Apple",
+      "icon": "Logo(3).png"
+    },
+    {
+      "id": 5,
+      "name": "Meta",
+      "icon": "Logo(4).png"
+    },
+    {
+      "id": 6,
+      "name": "Flipkart",
+      "icon": "Logo(5).png"
+    },
+    {
+      "id": 7,
+      "name": "Swiggy",
+      "icon": "Logo(6).png"
+    }
+  ]
+}

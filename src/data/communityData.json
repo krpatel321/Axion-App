@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "Welcome to Our Community",
+    "description": "Join thousands of professionals, developers, and enthusiasts who are building amazing things together. Share ideas, get help, and grow your network."
+  },
+  "stats": [
+    {
+      "value": "10K+",
+      "label": "Active Members"
+    },
+    {
+      "value": "500+",
+      "label": "Daily Posts"
+    },
+    {
+      "value": "50+",
+      "label": "Expert Mentors"
+    },
+    {
+      "value": "100+",
+      "label": "Events Yearly"
+    }
+  ],
+  "featuredMembers": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Tech Lead at Google"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Full Stack Developer"
+    },
+    {
+      "name": "Emily Rodriguez",
+      "role": "UX Designer"
+    }
+  ],
+  "trendingTopics": [
+    {
+      "name": "React Development",
+      "posts": 234
+    },
+    {
+      "name": "UI/UX Design",
+      "posts": 189
+    },
+    {
+      "name": "Career Advice",
+      "posts": 156
+    },
+    {
+      "name": "TypeScript Tips",
+      "posts": 145
+    }
+  ],
+  "posts": [
+    {
+      "author": "Sarah Johnson",
+      "time": "2 hours ago",
+      "title": "Best practices for React performance optimization",
+      "excerpt": "Learn how to optimize your React applications for better performance with these proven techniques...",
+      "likes": 45,
+      "comments": 12,
+      "shares": 8,
+      "image": true
+    },
+    {
+      "author": "Michael Chen",
+      "time": "5 hours ago",
+      "title": "Introducing our new open source library",
+      "excerpt": "We're excited to announce the release of our new UI component library built with TypeScript...",
+      "likes": 89,
+      "comments": 23,
+      "shares": 15,
+      "image": true
+    },
+    {
+      "author": "Emily Rodriguez",
+      "time": "1 day ago",
+      "title": "Design systems: A comprehensive guide",
+      "excerpt": "Everything you need to know about building and maintaining a design system for your organization...",
+      "likes": 67,
+      "comments": 18,
+      "shares": 12,
+      "image": false
+    }
+  ],
+  "events": [
+    {
+      "date": "15",
+      "month": "MAR",
+      "title": "React Workshop 2024",
+      "time": "10:00 AM - 2:00 PM EST",
+      "attendees": 45
+    },
+    {
+      "date": "22",
+      "month": "MAR",
+      "title": "UI/UX Design Meetup",
+      "time": "3:00 PM - 5:00 PM EST",
+      "attendees": 32
+    },
+    {
+      "date": "05",
+      "month": "APR",
+      "title": "Career Growth Panel",
+      "time": "1:00 PM - 3:00 PM EST",
+      "attendees": 78
+    }
+  ],
+  "cta": {
+    "title": "Ready to Join Our Community?",
+    "description": "Connect with like-minded professionals, share your knowledge, and take your skills to the next level."
+  }
+}

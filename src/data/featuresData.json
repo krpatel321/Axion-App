@@ -1,0 +1,32 @@
+{
+  "heading": "Powerful Features for Your Business",
+  "subheading": "Discover the tools and capabilities that will help you grow, manage, and scale your business efficiently.",
+  "features": [
+    {
+      "title": "User Management",
+      "description": "Easily manage users, roles, and permissions with our intuitive dashboard. Track activity and control access levels."
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "Get real-time insights into your business performance with interactive charts, reports, and customizable metrics."
+    },
+    {
+      "title": "Secure Authentication",
+      "description": "Industry-standard security with multi-factor authentication, encryption, and regular security audits."
+    },
+    {
+      "title": "API Integration",
+      "description": "Seamlessly connect with your favorite tools and services through our robust RESTful API documentation."
+    },
+    {
+      "title": "Mobile Responsive",
+      "description": "Access your dashboard from any device with our fully responsive design optimized for mobile and tablet."
+    },
+    {
+      "title": "24/7 Support",
+      "description": "Get help whenever you need it with our dedicated support team available around the clock via chat and email."
+    }
+  ],
+  "ctaTitle": "Ready to Get Started?",
+  "ctaDescription": "Join thousands of businesses that trust our platform to manage their operations efficiently."
+}
